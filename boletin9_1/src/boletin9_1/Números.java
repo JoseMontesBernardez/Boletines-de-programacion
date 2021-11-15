@@ -1,4 +1,4 @@
-package Boletin9_1;
+package boletin9_1;
 
 import javax.swing.*;
 

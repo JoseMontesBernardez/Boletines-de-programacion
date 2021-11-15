@@ -1,4 +1,4 @@
-package Boletin9_2;
+package boletin9_2;
 
 public class Operaciones {
     public void opSuma(){
