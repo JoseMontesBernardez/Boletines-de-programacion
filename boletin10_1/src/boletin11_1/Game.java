@@ -1,4 +1,4 @@
-package boletin10_1;
+package boletin11_1;
 
 import javax.swing.*;
 
@@ -8,33 +8,25 @@ public class Game {
         int r_1 = rango_1();
         int r_2 = rango_2();
         int i = numeroIntentos();
-        int j = 0;
+        int j;
 
-        JOptionPane.showMessageDialog(null, "El numero estará entre " + r_1 + " y " + r_2+" y tienes "+(i+1)+" intentos");
-        int n_2 = pedirNumero();
+        JOptionPane.showMessageDialog(null, "El numero estará entre " + r_1 + " y " + r_2+" y tienes "+i+" intentos");
+        int n_2;
 
-        while (j < i) {
-            j=j;
-            j++;
+       for (j=1; j<=i; j++){
+           n_2 = pedirNumero();
+           if (n_2 == n_1){
+               JOptionPane.showMessageDialog(null, "HAS GANADO");
 
+           }else if (n_2 < n_1){
+               JOptionPane.showMessageDialog(null, "El numero es mayor");
+           }else if (n_2>n_1) {
+               JOptionPane.showMessageDialog(null, "El numero es menor");
+           }
 
-            if (n_2 == n_1) {
-                JOptionPane.showMessageDialog(null, "HAS GANADO");
-            }else if (n_2 < n_1) {
-                    JOptionPane.showMessageDialog(null, "El numero es mas alto: ");
-                    n_2 = pedirNumero();
-            } else if (n_2 > n_1) {
-                    JOptionPane.showMessageDialog(null, "El numero es mas pequeño");
-                    n_2 = pedirNumero();
-                }
             }
         JOptionPane.showMessageDialog(null, "HAS PERDIDO");
         }
-
-
-
-
-
 
     public int darNumero(){
         int num = Integer.parseInt(JOptionPane.showInputDialog("Introduce el numero a adivinar por el otro jugador: "));
