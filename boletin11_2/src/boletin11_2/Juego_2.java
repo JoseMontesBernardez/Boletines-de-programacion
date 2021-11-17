@@ -13,25 +13,35 @@ public class Juego_2 {
         JOptionPane.showMessageDialog(null, "El numero estará entre " + r_1 + " y " + r_2+" y tienes "+i+" intentos");
         int n_2;
 
-        for (j=1; j<=i; j++){
+        for (j=1; j<=i; j++) {
             n_2 = pedirNumero();
-            if (n_2 == n_1){
+            if (n_2 == n_1) {
                 JOptionPane.showMessageDialog(null, "HAS GANADO");
                 break;
+            } else if (n_2 != n_1) {
 
-            }else if (Math.abs(n_2 - n_1) > 20 ){
-                JOptionPane.showMessageDialog(null, "Estás muy lejos");
-            }else if (Math.abs(n_2 - n_1) >= 10) {
-                JOptionPane.showMessageDialog(null, "Estás lejos");
-            }else if (Math.abs(n_2 - n_1) >= 5){
-                JOptionPane.showMessageDialog(null, "Estás cerca");
-            }else if (Math.abs(n_2-n_1) < 5){
-                JOptionPane.showMessageDialog(null, "Estás muy cerca");
+
+                if (Math.abs(n_2 - n_1) > 20) {
+                    JOptionPane.showMessageDialog(null, "Estás muy lejos");
+                } else if (Math.abs(n_2 - n_1) >= 10) {
+                    JOptionPane.showMessageDialog(null, "Estás lejos");
+                } else if (Math.abs(n_2 - n_1) >= 5) {
+                    JOptionPane.showMessageDialog(null, "Estás cerca");
+                } else if (Math.abs(n_2 - n_1) < 5) {
+                    JOptionPane.showMessageDialog(null, "Estás muy cerca");
+                }
+
             }
-        }
-        JOptionPane.showMessageDialog(null, "HAS PERDIDO");
+            if (j == i) {
+                JOptionPane.showMessageDialog(null, " HAS PERDIDO");
+            }
 
-    }
+            }
+        JOptionPane.showMessageDialog(null, "SALIDA DEL JUEGO");
+
+
+            }
+
 
 
     public int pedirNumero(){
