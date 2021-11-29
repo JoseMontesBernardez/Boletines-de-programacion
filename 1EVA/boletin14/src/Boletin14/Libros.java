@@ -18,6 +18,7 @@ public class Libros extends Publicacion {
 
     @Override
     public String toString() {
+        super.toString();
         return ("prestado='" + prestado);
     }
 }

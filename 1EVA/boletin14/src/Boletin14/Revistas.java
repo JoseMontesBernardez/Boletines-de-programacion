@@ -18,6 +18,7 @@ public class Revistas extends Publicacion{
 
     @Override
     public String toString() {
+        super.toString();
         return ("num=" + num);
     }
 }

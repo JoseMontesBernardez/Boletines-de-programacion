@@ -10,6 +10,7 @@ public class Disco extends Multimedia{
 
     @Override
     public String toString() {
+        super.toString();
         return "xenero="+ xenero;
     }
 }
