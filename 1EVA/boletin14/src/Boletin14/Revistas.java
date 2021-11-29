@@ -12,6 +12,10 @@ public class Revistas extends Publicacion{
         this.num = num;
     }
 
+    public String getDevolverAno(){
+        return super.getAno_publicacion();
+    }
+
     @Override
     public String toString() {
         return ("num=" + num);
