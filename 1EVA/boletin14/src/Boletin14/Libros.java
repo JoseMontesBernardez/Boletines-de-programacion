@@ -12,6 +12,10 @@ public class Libros extends Publicacion {
         this.prestado = prestado;
     }
 
+    public String getDevolverAno(){
+        return super.getAno_publicacion();
+    }
+
     @Override
     public String toString() {
         return ("prestado='" + prestado);
