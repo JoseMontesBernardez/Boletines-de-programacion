@@ -15,7 +15,6 @@ public class Pelicualas extends Multimedia{
 
     @Override
     public String toString() {
-        super.toString();
-        return "actor_Principal=" + actor_Principal +", actriz_Principal='" + actriz_Principal;
+        return (super.toString()+"actor_Principal=" + actor_Principal +", actriz_Principal='" + actriz_Principal);
     }
 }
